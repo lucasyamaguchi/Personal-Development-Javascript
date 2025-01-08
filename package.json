@@ -2,5 +2,16 @@
   "devDependencies": {
     "live-server": "^1.2.2",
     "prettier": "^3.4.2"
+  },
+  "name": "personal-development-javascript",
+  "description": "Um repositório para armazenar todos os estudos na linguagem javascript.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --wtrite .",
+    "live-server": "npx live-server"
   }
 }
