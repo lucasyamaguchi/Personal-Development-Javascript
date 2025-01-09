@@ -1,0 +1,38 @@
+Para a criação deste espaço e centralização dos conteúdos de javascript, foi
+utilizado o github e o codespaces. Ao abrir um novo repositório e iniciar as
+anotações, foi então criada a estrutura básica do projeto, as dependências e
+licenças. Instalação do Node: nvm --v
+<!-- Verificação da versão (se instalada) do node, no caso, o codespaces já possui o node nativo -->
+nvm install lts/hydrogen
+<!-- Selecionada versão estável para trabalhar o projeto -->
+nvm alias default lts/hydrogen
+<!-- Definido o padrão do projeto para a versão selecionada -->
+
+Criação do arquivo .nvmrc, que indica ao diretório qual versão do node usaremos.
+lts/hydrogen npm init
+<!-- Utilização para criar o primeiro package.json, a lista de dependências do projeto para o servidor externo -->
+
+Por se tratar de um repositório no Github, a fim de executar o arquivo da aula
+para ver as atualizações, utilizei a extensão Live-server, esta que foi
+instalada através do terminal: npm install live-server -D
+<!-- O sufixo -D é utilizado para tornar este uma dependência somente de desenvolvimento, não uma dependência geral para funcionar o projeto -->
+
+Após as instalações, é selecionada a formatação do código, que será realizada
+através do Prettier, este, que também possui instalação através do node. npm
+install prettier -D
+<!-- Mais uma vez, utilizado somente como dependência de desenvolvimento, por não afetar o funcionamento geral do repositório -->
+
+Após instalação dos componentes básicos para o repositório funcionar como
+esperado, foram criados os arquivos de configurações com as seguintes
+instruções: .gitignore |-> node_modules
+<!-- Este faz com que o Github, ao lançar os commits, ignore esta pasta do node, pois a mesma não fará parte do repositório e não precisa ser verificada a todo momento -->
+
+.editorconfig |-> root = true [*] indent_style = space indent_size = 2
+<!-- Estas configurações fazem parte do Prettier, fazendo com que a identação do código seja de 2 espaços e afete todo o projeto pelo root = true -->
+
+Por fim, para facilitar o uso recorrente de alguns comandos, são criados scripts
+no arquivo package.json: "scripts": { "lint:check": "prettier --check .",
+"lint:fix": "prettier --wtrite .", "live-server": "npx live-server" } Sendo este
+último, o responsável por rodar o live server do repositório, fazendo assim com
+que possamos selecionar qual arquivo .html com os códigos em .js da aula
+queremos rodar, sem necessidade de utilizar o Next na aplicação.
