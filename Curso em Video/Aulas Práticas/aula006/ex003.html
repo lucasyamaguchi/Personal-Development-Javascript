@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(6, 6, 87);
+        color: bisque;
+        font: normal 25pt Arial;
+        text-align: center;
+      }
+      h1 {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá, mundo! <a href="https://pt.wikipedia.org/wiki/Mundo">🌎</a></h1>
+    <script>
+      var n1 = Number(window.prompt("Digite um número: ")); //aqui criamos as variáveis para armazenar os numeros que o usuario digita
+      var n2 = Number(window.prompt("Digite outro número: "));
+      var s = n1 + n2;
+      window.alert("A soma dos valores é " + s); //Aqui, vai retornar literalmente um número seguido do outro, pois esse
+      // "+" está concatenando e não para adição, pois não demos o tipo de dado que é armazenado na var, então é armazenado como string.
+      window.alert(`A soma entre ${n1} e ${n2} é ${s}`); //Aqui usamos o template string, como no ECMA script para facilitar a escrita
+    </script>
+  </body>
+</html>

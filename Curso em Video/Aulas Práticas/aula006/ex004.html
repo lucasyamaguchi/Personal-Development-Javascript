@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font: normal 20pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual é seu nome"); //Aqui fazemos a variável receber um nome, no caso, uma String por padrão
+      document.write(`Seu nome tem ${nome.length} letras!`); //E neste comando, fazemos com que seja escrito na tela, o que queremos mostrar.
+      document.writeln(`<h2>Seu nome tem ${nome.length} letras!<!h2>`); //É possível também adicionar tags HTML neste comando, fazendo assim a escrita ser diferente.
+      document.writeln(
+        `<br>Olá ${nome}!</br> seu nome tem ${nome.length} letras!`,
+      );
+    </script>
+  </body>
+</html>

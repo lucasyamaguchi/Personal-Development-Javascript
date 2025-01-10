@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(6, 6, 87);
+        color: bisque;
+        font: normal 25pt Arial;
+        text-align: center;
+      }
+      h1 {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá, mundo! <a href="https://pt.wikipedia.org/wiki/Mundo">🌎</a></h1>
+    <script>
+      //window.prompt("Qual o seu nome?"); //janela de alerta no site
+      var nome = window.prompt("Qual seu nome?");
+      var confirma = window.confirm("Então seu nome é " + nome + "?"); //o "+" é um sinal de concatenação, que junta a string de texto no resultado da variável obtida no prompt.
+      window.alert("Prazer em te conhecer " + nome + "!");
+    </script>
+  </body>
+</html>

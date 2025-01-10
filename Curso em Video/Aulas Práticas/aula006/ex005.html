@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.alert("Atenção, é preciso informar o seu salário a seguir!");
+      var salario1 = window.prompt("Qual o seu salário hoje?");
+      var salario2 = window.prompt(
+        "E qual o salário que você gostaria de receber?",
+      );
+      var diff = Number(salario2) - Number(salario1);
+      if (diff >= 0) {
+        document.write(
+          `Então faltam ${diff.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} para conseguir! Força!`,
+        ); //Esse comando vai escrever no nosso HTML: "Então faltam R$ 1.000,00 para conseguir! Força!"
+      } else {
+        document.write("Caramba, você já está ganhando mais do que gostaria?");
+      }
+    </script>
+  </body>
+</html>
