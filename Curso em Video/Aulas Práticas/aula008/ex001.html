@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual o seu nome?");
+      window.alert("Atenção, agora é preciso informar o seu salário a seguir!");
+      var salarioinicial = window.prompt(
+        "Qual o seu salário hoje " + nome + "?",
+      );
+      var salariofinal = window.prompt(
+        "E qual o salário que você gostaria de receber?",
+      );
+      /*var diff = Number(salario2) - Number(salario1);
+      if (diff >= 0) {
+        document.write(
+          `Então faltam ${diff.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} para conseguir! Força!`,
+        ); //Esse comando vai escrever no nosso HTML: "Então faltam R$ 1.000,00 para conseguir! Força!"
+      } else {
+        document.write(
+          "Caramba, " + nome + " você já está ganhando mais do que gostaria?",
+        );
+      }*/
+      var diff = salariofinal - salarioinicial;
+      diff >= 0
+        ? document.write(
+            `<h1>Então faltam só ${diff.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} para conseguir, ` +
+              nome +
+              `! Força!</h1>`,
+          )
+        : /* document.write(
+            `<h1>Caramba, ` +
+              nome +
+              ` você já está ganhando` ${Math.abs(diff).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} `a mais do que gostaria?<h1>`
+                //O método "Math.abs(n)" vai retornar o valor absoluto da variável (no caso, a mesma daria um número negativo nesta parte)
+          ); */
+
+          /*O método que usei estava dando um problema nas concatenações no .write, onde usei o comando ${} (um template
+          literal e delimitado por crases) para interir diretamente a variável na string, porém, estava também 
+          concatenando com "+", corrigido pelo ChatGPT e simplificado pelo comando abaixo.
+          Só foi encontrado o erro (pois estava funcionando corretamente) após o Prettier, não formatar o código
+          deixando ainda alguns sinais de erro, as "minhoquinhas" vermelhas embaixo do escrito. */
+          /*O que foi corrigido:
+Remoção do operador +: Dentro de template literals, não é necessário concatenar usando +. Use ${} para incluir variáveis ou expressões.
+Posição das crases: Certifique-se de abrir e fechar corretamente o template literal com crases (`), cobrindo toda a string que deseja montar.*/
+          document.write(
+            `<h1>Caramba, ${nome}, você já está ganhando ${Math.abs(diff).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })} a mais do que gostaria?<h1>`,
+          );
+    </script>
+  </body>
+</html>
