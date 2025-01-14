@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de Palavras</title>
+  </head>
+  <body>
+    <script>
+      var word1 = window.prompt(
+        "Insira aqui uma palavra aleatória, ou soque o seu teclado",
+      );
+      var word2 = window.prompt("Agora escreva mais alguma coisa aqui");
+      var letter_count1 = word1.length;
+      var letter_count2 = word2.length;
+      var char_diff = word1.length - word2.length;
+
+      letter_count1 === letter_count2
+        ? document.write(
+            `<h1>Caramba! As duas frases que você colocou tem a mesma quantidade de caracteres? ${word1} e ${word2}</h1>`,
+          ) &
+          document.writeln(
+            `<h2>As duas frases tem ${letter_count1} caracteres!</h2>`,
+          )
+        : letter_count1 > letter_count2
+          ? document.write(
+              `<h1>Parece que a primeira frase (${word1}) tem mais caracteres do que a segunda (${word2})!</h1>`,
+            ) &
+            document.writeln(
+              `<h2>A primeira frase tem ${letter_count1} caracteres!</h2>`,
+            ) &
+            document.writeln(
+              `<h2>E a segunda frase tem ${letter_count2} caracteres!</h2>`,
+            ) &
+            document.writeln(
+              `<h2>É uma diferença de ${Math.abs(char_diff)} caracter(es)!</h2>`,
+            )
+          : document.write(
+              `<h1>Parece que a segunda frase (${word2}) tem mais caracteres do que a primeira (${word1})!</h1>`,
+            ) &
+            document.writeln(
+              `<h2>A segunda frase tem ${letter_count2} caracteres!</h2>`,
+            ) &
+            document.writeln(
+              `<h2>E a primeira frase tem ${letter_count1} caracteres!</h2>`,
+            ) &
+            document.writeln(
+              `<h2>É uma diferença de ${Math.abs(char_diff)} caracter(es)!</h2>`,
+            );
+    </script>
+  </body>
+</html>
