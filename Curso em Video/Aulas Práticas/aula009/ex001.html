@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: rgb(124, 124, 124);
+        color: antiquewhite;
+        font: normal 18pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div>Clique em mim</div>
+    <script>
+      var corpo = window.document.body;
+      var p1 = window.document.getElementsByTagName("p")[1]; //Comando que pega o elemento da página pela tag (p) e seleciona qual P utilizar, no caso, o primeiro (0)
+      //Arranjar algum jeito de funcionar os scripts de DOM direto do node no browser, ou como rodar o node no browser.
+      window.document.write("Está escrito assim: " + p1.innerHTML);
+      corpo.style.background = "white"; //muda a cor do body pela variável e pelo style.background
+      p1.style.color = "blue"; //muda a cor do texto em P1, não no retorno acima criado, para azul.
+    </script>
+  </body>
+</html>

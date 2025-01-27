@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "lint:check": "prettier --check .",
-    "lint:fix": "prettier --wtrite .",
+    "lint:fix": "prettier --write .",
     "live-server": "npx live-server"
   }
 }
