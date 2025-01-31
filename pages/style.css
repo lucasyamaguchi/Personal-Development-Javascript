@@ -1,0 +1,67 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --header-height: 3.5rem;
+  /* Sun light Theme*/
+  --bg-color: rgb(255, 243, 231);
+  --text-color: rgb(54, 54, 54);
+  --primary-color: rgb(255, 243, 231);
+  --secondary-color: rgb(255, 243, 231);
+  --menu-bg: rgb(255, 243, 231);
+  --menu-text: rgb(255, 243, 231);
+}
+[data-theme]:dark {
+  /* Moon light Theme*/
+  --bg-color: rgb(54, 54, 54);
+  --text-color: rgb(255, 243, 231);
+  --primary-color: rgb(54, 54, 54);
+  --secondary-color: rgb(54, 54, 54);
+  --menu-bg: rgb(54, 54, 54);
+  --menu-text: rgb(54, 54, 54);
+}
+/*====  MENU ============================ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  height: 8rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a.menu {
+  color: black;
+  padding: 8px;
+}
+/*====  CONTENT ============================ */
+body {
+  margin: 1rem 1.25rem 4rem;
+}
+/*====  FOOTER ============================ */

@@ -20,9 +20,11 @@
     <script>
       var corpo = window.document.body;
       var p1 = window.document.getElementsByTagName("p")[1]; //Comando que pega o elemento da página pela tag (p) e seleciona qual P utilizar, no caso, o primeiro (0)
+      //Toda vez que o "Elements" estiver no plural, é necessário especificar entre colchetes qual o elemento que vai pegar.
       //Arranjar algum jeito de funcionar os scripts de DOM direto do node no browser, ou como rodar o node no browser.
-      window.document.write("Está escrito assim: " + p1.innerHTML);
-      corpo.style.background = "white"; //muda a cor do body pela variável e pelo style.background
+      //Já é possível visualizar os scripts em DOM pois há o live server instalado no repositório.
+      window.document.write("Está escrito assim: " + p1.innerHTML); //innerHTML pega a tag por inteiro, enquanto Text utiliza somente o que está escrito
+      corpo.style.background = rgb(124, 124, 124); //muda a cor do body pela variável e pelo style.background
       p1.style.color = "blue"; //muda a cor do texto em P1, não no retorno acima criado, para azul.
     </script>
   </body>
