@@ -28,37 +28,85 @@ img {
   --secondary-color: rgb(255, 243, 231);
   --menu-bg: rgb(255, 243, 231);
   --menu-text: rgb(255, 243, 231);
-}
-[data-theme]:dark {
-  /* Moon light Theme*/
-  --bg-color: rgb(54, 54, 54);
-  --text-color: rgb(255, 243, 231);
-  --primary-color: rgb(54, 54, 54);
-  --secondary-color: rgb(54, 54, 54);
-  --menu-bg: rgb(54, 54, 54);
-  --menu-text: rgb(54, 54, 54);
+  --menu-text-hover: rgb(0, 90, 194);
+  --menu-button-hover: rgb(0, 90, 194);
 }
 /*====  MENU ============================ */
 header {
+  width: 100%;
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem;
   height: 8rem;
+  gap: 1.25rem;
+  background-color: aquamarine;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-nav {
+
+div.nav-buttons {
   display: flex;
+  gap: 0.5rem;
+}
+
+button.Arrow-Key {
+  display: flex;
+  background-color: aquamarine;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 500ms ease,
+    transform 3s ease;
+}
+
+button.Arrow-Key:hover {
+  background-color: var(--menu-button-hover);
+}
+
+button.Arrow-Key:active {
+  background-color: aquamarine;
+}
+
+nav {
+  width: auto;
+  display: flex;
+  flex-grow: 1; /* Ocupa todo o espaço disponível sem estourar */
   align-items: center;
   gap: 1.25rem;
+  background-color: #fbfbfb;
+  justify-content: space-between;
 }
+
 nav ul {
   display: flex;
-  list-style: none;
+  justify-content: center;
+  gap: 1.25rem;
+  background-color: #fbfbfb;
+  padding-left: 2rem;
 }
 
 nav ul li a.menu {
   color: black;
-  padding: 8px;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  transition:
+    color 500ms ease,
+    transform 3s ease;
+}
+
+nav ul li a.menu:hover {
+  color: var(--menu-text-hover);
+}
+
+div.search-conteiner input.search {
+  width: 28rem;
+  height: 2rem;
 }
 /*====  CONTENT ============================ */
 body {
